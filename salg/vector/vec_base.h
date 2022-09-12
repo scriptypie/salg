@@ -12,6 +12,7 @@ namespace salg
     template<>
     struct vec_base<1>
     {
+        enum {EXNUM = 1};
         union 
         {
             struct 
@@ -20,11 +21,19 @@ namespace salg
             };
             scalar data[1] = {};
         };
+
+        vec_base() = default;
+        vec_base(const scalar _data[EXNUM])
+        {
+            for (short i = 0; i < EXNUM; i++)
+                data[i] = _data[i];
+        }
     };
 
     template<>
     struct vec_base<2>
     {
+        enum {EXNUM = 2};
         union 
         {
             struct {
@@ -32,11 +41,19 @@ namespace salg
             };
             scalar data[2] = {};
         };
+
+        vec_base() = default;
+        vec_base(const scalar _data[EXNUM])
+        {
+            for (short i = 0; i < EXNUM; i++)
+                data[i] = _data[i];
+        }
     };
 
     template<>
     struct vec_base<3>
     {
+        enum {EXNUM = 3};
         union 
         {
             struct {
@@ -44,11 +61,19 @@ namespace salg
             };
             scalar data[3] = {};
         };
+
+        vec_base() = default;
+        vec_base(const scalar _data[EXNUM])
+        {
+            for (short i = 0; i < EXNUM; i++)
+                data[i] = _data[i];
+        }
     };
 
     template<>
     struct vec_base<4>
     {
+        enum {EXNUM = 4};
         union 
         {
             struct {
@@ -56,6 +81,13 @@ namespace salg
             };
             scalar data[4] = {};
         };
+
+        vec_base() = default;
+        vec_base(const scalar _data[EXNUM])
+        {
+            for (short i = 0; i < EXNUM; i++)
+                data[i] = _data[i];
+        }
     };
 
 }

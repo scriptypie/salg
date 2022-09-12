@@ -7,10 +7,8 @@
 namespace salg
 {
 
-struct vec1
+struct vec1 : vec_base<1>
 {
-    vec_base<1> storage;
-
     inline vec1() = default;
     inline ~vec1() = default;
     inline vec1(const vec1&) = default;
@@ -20,7 +18,7 @@ struct vec1
 
     vec1(const scalar& x);
 
-    inline operator scalar() const { return storage.data[0]; }
+    inline operator scalar() const { return data[0]; }
 
     template<class U>
     vec1 operator + (const U& other);

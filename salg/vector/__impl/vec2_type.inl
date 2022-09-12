@@ -1,77 +1,82 @@
-#include "../vec1/vec1_type.h"
+#include "../vec2/vec2_type.h"
 
 namespace salg
 {
 
-vec1::vec1(const scalar& x) : vec_base(((scalar[]){x}))
+vec2::vec2(const scalar& x, const scalar& y) : vec_base(((scalar[]){x, y}))
 {
+}
+
+vec2& vec2::xy()
+{
+    return *this;
 }
 
 ///////
 
 template<class U>
-vec1 vec1::operator + (const U& other)
+vec2 vec2::operator + (const U& other)
 {
-    vec1 result = {};
+    vec2 result = {};
     for (short i = 0; i < EXNUM; i++)
         result.data[i] = data[i] + static_cast<scalar>(other);
     return result;
 }
 
-vec1 vec1::operator + (const vec1& other)
+vec2 vec2::operator + (const vec2& other)
 {
-    vec1 result = {};
+    vec2 result = {};
     for (short i = 0; i < EXNUM; i++)
         result.data[i] = data[i] + other.data[i];
     return result;
 }
 
 template<class U>
-vec1 vec1::operator - (const U& other)
+vec2 vec2::operator - (const U& other)
 {
-    vec1 result = {};
+    vec2 result = {};
     for (short i = 0; i < EXNUM; i++)
         result.data[i] = data[i] - static_cast<scalar>(other);
     return result;
 }
 
-vec1 vec1::operator - (const vec1& other)
+vec2 vec2::operator - (const vec2& other)
 {
-    vec1 result = {};
+    vec2 result = {};
     for (short i = 0; i < EXNUM; i++)
         result.data[i] = data[i] - other.data[i];
     return result;
 }
 
 template<class U>
-vec1 vec1::operator * (const U& other)
+vec2 vec2::operator * (const U& other)
 {
-    vec1 result = {};
+    vec2 result = {};
     for (short i = 0; i < EXNUM; i++)
         result.data[i] = data[i] * static_cast<scalar>(other);
     return result;
 }
 
-vec1 vec1::operator * (const vec1& other)
+vec2 vec2::operator * (const vec2& other)
 {
-    vec1 result = {};
+    vec2 result = {};
     for (short i = 0; i < EXNUM; i++)
         result.data[i] = data[i] * other.data[i];
     return result;
 }
 
 template<class U>
-vec1 vec1::operator / (const U& other)
+vec2 vec2::operator / (const U& other)
 {
-    vec1 result = {};
+    vec2 result = {};
     for (short i = 0; i < EXNUM; i++)
         result.data[i] = data[i] / static_cast<scalar>(other);
     return result;
 }
 
-vec1 vec1::operator / (const vec1& other)
+vec2 vec2::operator / (const vec2& other)
 {
-    vec1 result = {};
+    vec2 result = {};
     for (short i = 0; i < EXNUM; i++)
         result.data[i] = data[i] / other.data[i];
     return result;
@@ -80,14 +85,14 @@ vec1 vec1::operator / (const vec1& other)
 //////
 
 template<class U>
-vec1& vec1::operator += (const U& other)
+vec2& vec2::operator += (const U& other)
 {
     for (short i = 0; i < EXNUM; i++)
         data[i] += other;
     return *this;
 }
 
-vec1& vec1::operator += (const vec1& other)
+vec2& vec2::operator += (const vec2& other)
 {
     for (short i = 0; i < EXNUM; i++)
         data[i] += other.data[i];
@@ -95,14 +100,14 @@ vec1& vec1::operator += (const vec1& other)
 }
 
 template<class U>
-vec1& vec1::operator -= (const U& other)
+vec2& vec2::operator -= (const U& other)
 {
     for (short i = 0; i < EXNUM; i++)
         data[i] -= other;
     return *this;
 }
 
-vec1& vec1::operator -= (const vec1& other)
+vec2& vec2::operator -= (const vec2& other)
 {
     for (short i = 0; i < EXNUM; i++)
         data[i] -= other.data[i];
@@ -110,14 +115,14 @@ vec1& vec1::operator -= (const vec1& other)
 }
 
 template<class U>
-vec1& vec1::operator *= (const U& other)
+vec2& vec2::operator *= (const U& other)
 {
     for (short i = 0; i < EXNUM; i++)
         data[i] *= other;
     return *this;
 }
 
-vec1& vec1::operator *= (const vec1& other)
+vec2& vec2::operator *= (const vec2& other)
 {
     for (short i = 0; i < EXNUM; i++)
         data[i] *= other.data[i];
@@ -125,14 +130,14 @@ vec1& vec1::operator *= (const vec1& other)
 }
 
 template<class U>
-vec1& vec1::operator /= (const U& other)
+vec2& vec2::operator /= (const U& other)
 {
     for (short i = 0; i < EXNUM; i++)
         data[i] /= other;
     return *this;
 }
 
-vec1& vec1::operator /= (const vec1& other)
+vec2& vec2::operator /= (const vec2& other)
 {
     for (short i = 0; i < EXNUM; i++)
         data[i] /= other.data[i];

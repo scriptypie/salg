@@ -7,7 +7,7 @@ bool operator==(const vec1& a, const vec1& b)
 {
     return 
     (
-        a.storage.data[0] == b.storage.data[0]
+        comparator::equal(a.data[0], b.data[0])
     );
 }
 
@@ -15,7 +15,7 @@ bool operator!=(const vec1& a, const vec1& b)
 {
     return 
     (
-        a.storage.data[0] != b.storage.data[0]
+        !comparator::equal(a.data[0], b.data[0])
     );
 }
 
@@ -23,7 +23,7 @@ bool operator>=(const vec1& a, const vec1& b)
 {
     return 
     (
-        a.storage.data[0] >= b.storage.data[0]
+        a.data[0] >= b.data[0]
     );
 }
 
@@ -31,7 +31,7 @@ bool operator<=(const vec1& a, const vec1& b)
 {
     return 
     (
-        a.storage.data[0] <= b.storage.data[0]
+        a.data[0] <= b.data[0]
     );
 }
 
@@ -39,7 +39,7 @@ bool operator<(const vec1& a, const vec1& b)
 {
     return 
     (
-        a.storage.data[0] < b.storage.data[0]
+        comparator::less(a.data[0], b.data[0])
     );
 }
 
@@ -47,9 +47,16 @@ bool operator>(const vec1& a, const vec1& b)
 {
     return 
     (
-        a.storage.data[0] > b.storage.data[0]
+        comparator::greater(a.data[0], b.data[0])
     );
 }
 
+std::ostream& operator<<(std::ostream& os, const salg::vec1& v)
+{
+    return
+    os << "("
+    << v.data[0]
+    << ")";
+}
 
 }

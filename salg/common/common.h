@@ -4,6 +4,9 @@
 
 #include "macros.h"
 #include "scalar.h"
+#include "comparator.h"
+
+#include <ostream>
 
 namespace salg
 {
