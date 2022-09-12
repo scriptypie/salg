@@ -3,7 +3,7 @@
 namespace salg
 {
 
-bool operator==(const vec1& a, const vec1& b)
+bool operator==(vec1 a, vec1 b)
 {
     return 
     (
@@ -11,7 +11,7 @@ bool operator==(const vec1& a, const vec1& b)
     );
 }
 
-bool operator!=(const vec1& a, const vec1& b)
+bool operator!=(vec1 a, vec1 b)
 {
     return 
     (
@@ -19,7 +19,7 @@ bool operator!=(const vec1& a, const vec1& b)
     );
 }
 
-bool operator>=(const vec1& a, const vec1& b)
+bool operator>=(vec1 a, vec1 b)
 {
     return 
     (
@@ -27,7 +27,7 @@ bool operator>=(const vec1& a, const vec1& b)
     );
 }
 
-bool operator<=(const vec1& a, const vec1& b)
+bool operator<=(vec1 a, vec1 b)
 {
     return 
     (
@@ -35,7 +35,7 @@ bool operator<=(const vec1& a, const vec1& b)
     );
 }
 
-bool operator<(const vec1& a, const vec1& b)
+bool operator<(vec1 a, vec1 b)
 {
     return 
     (
@@ -43,7 +43,7 @@ bool operator<(const vec1& a, const vec1& b)
     );
 }
 
-bool operator>(const vec1& a, const vec1& b)
+bool operator>(vec1 a, vec1 b)
 {
     return 
     (
@@ -51,7 +51,7 @@ bool operator>(const vec1& a, const vec1& b)
     );
 }
 
-std::ostream& operator<<(std::ostream& os, const salg::vec1& v)
+std::ostream& operator<<(std::ostream& os, salg::vec1 v)
 {
     return
     os << "("

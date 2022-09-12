@@ -17,6 +17,8 @@ constexpr scalar EPSILON = __FLT_EPSILON__;
 
 inline scalar fabs(const scalar& a);
 
+inline scalar rsqrt(const scalar& a);
+
 }
 
 #include "__impl/scalar.inl"

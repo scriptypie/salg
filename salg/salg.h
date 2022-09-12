@@ -11,3 +11,4 @@
 
 #include "vector/vec1/vec1.h"
 #include "vector/vec2/vec2.h"
+#include "vector/vec3/vec3.h"

@@ -5,7 +5,7 @@
 namespace salg
 {
 
-bool operator==(const vec2& a, const vec2& b)
+bool operator==(vec2 a, vec2 b)
 {
     return 
     (
@@ -14,7 +14,7 @@ bool operator==(const vec2& a, const vec2& b)
     );
 }
 
-bool operator!=(const vec2& a, const vec2& b)
+bool operator!=(vec2 a, vec2 b)
 {
     return 
     (
@@ -23,7 +23,7 @@ bool operator!=(const vec2& a, const vec2& b)
     );
 }
 
-bool operator>=(const vec2& a, const vec2& b)
+bool operator>=(vec2 a, vec2 b)
 {
     return 
     (
@@ -32,7 +32,7 @@ bool operator>=(const vec2& a, const vec2& b)
     );
 }
 
-bool operator<=(const vec2& a, const vec2& b)
+bool operator<=(vec2 a, vec2 b)
 {
     return 
     (
@@ -41,7 +41,7 @@ bool operator<=(const vec2& a, const vec2& b)
     );
 }
 
-bool operator<(const vec2& a, const vec2& b)
+bool operator<(vec2 a, vec2 b)
 {
     return 
     (
@@ -50,7 +50,7 @@ bool operator<(const vec2& a, const vec2& b)
     );
 }
 
-bool operator>(const vec2& a, const vec2& b)
+bool operator>(vec2 a, vec2 b)
 {
     return 
     (
@@ -59,18 +59,18 @@ bool operator>(const vec2& a, const vec2& b)
     );
 }
 
-vec2 max(const vec2& a, const vec2& b)
+vec2 max(vec2 a, vec2 b)
 {
     return (a > b) ? a : b;
 }
 
-vec2 min(const vec2& a, const vec2& b)
+vec2 min(vec2 a, vec2 b)
 {
     return (a < b) ? a : b;
 }
 
 
-scalar dot(const vec2& a, const vec2& b)
+scalar dot(vec2 a, vec2 b)
 {
     return 
     (
@@ -78,7 +78,7 @@ scalar dot(const vec2& a, const vec2& b)
     );
 }
 
-scalar cross(const vec2& a, const vec2& b)
+scalar cross(vec2 a, vec2 b)
 {
     return 
     (
@@ -86,12 +86,12 @@ scalar cross(const vec2& a, const vec2& b)
     );
 }
 
-scalar skew(const vec2& a, const vec2& b)
+scalar skew(vec2 a, vec2 b)
 {
     return cross(a, b);
 }
 
-scalar length(const vec2& a)
+scalar length(vec2 a)
 {
     return
     (
@@ -109,12 +109,12 @@ scalar length(const vec2& a)
     );
 }
 
-scalar length2(const vec2& a)
+scalar length2(vec2 a)
 {
     return length(a) * length(a);
 }
 
-scalar distance(const vec2& from, const vec2& to)
+scalar distance(vec2 from, vec2 to)
 {
     return length(
         {
@@ -124,7 +124,7 @@ scalar distance(const vec2& from, const vec2& to)
     );
 }
 
-vec2 normalize(const vec2& a)
+vec2 normalize(vec2 a)
 {
     scalar len = length(a);
     if (!len) return a;
@@ -133,7 +133,7 @@ vec2 normalize(const vec2& a)
     return b;
 }
 
-scalar magnitude(const vec2& a)
+scalar magnitude(vec2 a)
 {
     return
     (
@@ -145,7 +145,19 @@ scalar magnitude(const vec2& a)
     );
 }
 
-vec2 floor(const vec2& a)
+scalar imagnitude(vec2 a)
+{
+    return
+    (
+#ifdef SALG_HIGH_PRECISION
+    rsqrt(dot(a, a))
+#else
+    rsqrt(dot(a, a))
+#endif
+    );
+}
+
+vec2 floor(vec2 a)
 {
     return 
     {
@@ -157,7 +169,7 @@ vec2 floor(const vec2& a)
     };
 }
 
-vec2 ceil(const vec2& a)
+vec2 ceil(vec2 a)
 {
     return 
     {
@@ -169,7 +181,7 @@ vec2 ceil(const vec2& a)
     };
 }
 
-std::ostream& operator<<(std::ostream& os, const salg::vec2& v)
+std::ostream& operator<<(std::ostream& os, salg::vec2 v)
 {
     return 
     os << "(" 
