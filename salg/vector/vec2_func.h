@@ -32,6 +32,6 @@ namespace salg
     inline std::ostream& operator<<(std::ostream& os, salg::vec2 v);
 }
 
-#include "../__impl/vec2_func.inl"
+#include "__impl/vec2_func.inl"
 
 #endif

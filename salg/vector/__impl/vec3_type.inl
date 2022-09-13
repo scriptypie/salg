@@ -1,15 +1,19 @@
-#include "../vec3/vec3_type.h"
+#include "../vec3_type.h"
 
 namespace salg
 {
 
-vec3::vec3(const scalar& x, const scalar& y, const scalar& z) : vec_base(((scalar[]){x, y, z}))
+vec3::vec3(const scalar& x, const scalar& y, const scalar& z) : vec_base(((scalar[EXNUM]){x, y, z}))
 {
 }
 
-vec3& vec3::xyz()
+vec3::vec3(const vec2& v) : vec_base(((scalar[EXNUM]){v.data[0], v.data[1], 0}))
 {
-    return *this;
+}
+
+vec2 vec3::xy()
+{
+    return {data[0], data[1]};
 }
 
 ///////

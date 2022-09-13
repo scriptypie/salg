@@ -18,6 +18,6 @@ namespace salg
 
 }
 
-#include "../__impl/vec1_func.inl"
+#include "__impl/vec1_func.inl"
 
 #endif

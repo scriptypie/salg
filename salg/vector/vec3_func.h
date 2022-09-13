@@ -18,6 +18,8 @@ namespace salg
     inline vec3 min(vec3 a, vec3 b);
 
     inline scalar dot(vec3 a, vec3 b);
+    inline scalar dot(vec3 a, vec2 b);
+    inline scalar dot(vec2 a, vec3 b);
     inline vec3 cross(vec3 a, vec3 b);
     inline vec3 project(vec3 a, vec3 b);
     inline vec3 reject(vec3 a, vec3 b);
@@ -34,6 +36,6 @@ namespace salg
     inline std::ostream& operator<<(std::ostream& os, salg::vec3 v);
 }
 
-#include "../__impl/vec3_func.inl"
+#include "__impl/vec3_func.inl"
 
 #endif

@@ -1,4 +1,4 @@
-#include "../vec1/vec1_func.h"
+#include "../vec1_func.h"
 
 namespace salg
 {

@@ -2,7 +2,7 @@
 #ifndef SALG_VECTOR_VEC1_TYPE_H
 #define SALG_VECTOR_VEC1_TYPE_H
 
-#include "../vec_base.h"
+#include "vec_base.h"
 
 namespace salg
 {
@@ -57,6 +57,6 @@ struct vec1 : vec_base<1>
 
 }
 
-#include "../__impl/vec1_type.inl"
+#include "__impl/vec1_type.inl"
 
 #endif

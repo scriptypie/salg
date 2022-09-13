@@ -1,15 +1,10 @@
-#include "../vec2/vec2_type.h"
+#include "../vec2_type.h"
 
 namespace salg
 {
 
-vec2::vec2(const scalar& x, const scalar& y) : vec_base(((scalar[]){x, y}))
+vec2::vec2(const scalar& x, const scalar& y) : vec_base(((scalar[EXNUM]){x, y}))
 {
-}
-
-vec2& vec2::xy()
-{
-    return *this;
 }
 
 ///////

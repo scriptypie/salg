@@ -2,7 +2,7 @@
 #ifndef SALG_VECTOR_VEC3_TYPE_H
 #define SALG_VECTOR_VEC3_TYPE_H
 
-#include "../vec_base.h"
+#include "vec_base.h"
 
 namespace salg
 {
@@ -17,9 +17,9 @@ struct vec3 : vec_base<3>
     inline vec3& operator=(vec3&&) = default;
 
     vec3(const scalar& x, const scalar& y, const scalar& z);
+    vec3(const vec2& v);
 
-    inline vec2& xy();
-    inline vec3& xyz();
+    inline vec2 xy();
 
     template<class U>
     vec3 operator + (const U& other);
@@ -58,6 +58,6 @@ struct vec3 : vec_base<3>
 
 }
 
-#include "../__impl/vec3_type.inl"
+#include "__impl/vec3_type.inl"
 
 #endif
