@@ -9,6 +9,24 @@ namespace salg
 
     template<size_t N> struct vec_base;
 
+    template<size_t SIZE>
+    struct vec_data
+    {
+        scalar data[SIZE] = {};
+
+        inline vec_data() = default;
+        inline vec_data(vec_data&&) = default;
+        inline vec_data(const vec_data&) = default;
+        inline vec_data& operator=(vec_data&&) = default;
+        inline vec_data& operator=(const vec_data&) = default;
+        inline ~vec_data() = default;
+        inline vec_data(scalar _data[SIZE]) : data(_data) {}
+
+        scalar& operator[](size_t n) { return data[n]; }
+        const scalar& operator[](size_t n) const { return data[n]; }
+
+    };
+
     template<>
     struct vec_base<1>
     {
@@ -19,7 +37,7 @@ namespace salg
             {
                 scalar x;
             };
-            scalar data[1] = {};
+            vec_data<EXNUM> data = {};
         };
 
         vec_base() = default;
@@ -39,7 +57,7 @@ namespace salg
             struct {
                 scalar x, y;
             };
-            scalar data[2] = {};
+            vec_data<EXNUM> data = {};
         };
 
         vec_base() = default;
@@ -59,7 +77,7 @@ namespace salg
             struct {
                 scalar x, y, z;
             };
-            scalar data[3] = {};
+            vec_data<EXNUM> data = {};
         };
 
         vec_base() = default;
@@ -79,7 +97,7 @@ namespace salg
             struct {
                 scalar x, y, z, w;
             };
-            scalar data[4] = {};
+            vec_data<EXNUM> data = {};
         };
 
         vec_base() = default;
