@@ -13,6 +13,20 @@ namespace salg
 
     using size_t = unsigned long;
 
+    template<class T>
+    inline constexpr T min(const T& a, const T& b)
+    {
+        if (a == b) return a;
+        return (a < b) ? a : b;
+    }
+
+    template<class T>
+    inline constexpr T max(const T& a, const T& b)
+    {
+        if (a == b) return a;
+        return (a > b) ? a : b;
+    }
+
 }
 
 #endif

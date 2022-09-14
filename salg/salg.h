@@ -13,3 +13,5 @@
 #include "vector/vec2.h"
 #include "vector/vec3.h"
 #include "vector/vec4.h"
+
+#include "matrix/mat4.h"
