@@ -4,11 +4,9 @@
 
 using namespace salg;
 
-using mat4 = mat_base<4, 4>;
-
 int main()
 {
-    mat4 m4;
+    mat4 m4 = perspectiveLH(65.0, 1.668, 0.1, 1000.0);
 
     (void)m4;
     return 0;

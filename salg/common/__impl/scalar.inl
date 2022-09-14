@@ -1,5 +1,7 @@
 #include "../scalar.h"
 
+#include <cmath>
+
 namespace salg
 {
 
@@ -24,6 +26,30 @@ scalar rsqrt(const scalar& a)
 #endif
     scalar b = *reinterpret_cast<scalar*>(&i);
     return b * (1.5f - 0.5f * a * b * b);
+}
+
+scalar sin(const scalar& a)
+{
+    return 
+    (
+#ifdef SALG_HIGH_PRECISION
+    std::sin(a)
+#else
+    std::sinf(a)
+#endif
+    );
+}
+
+scalar cos(const scalar& a)
+{
+    return 
+    (
+#ifdef SALG_HIGH_PRECISION
+    std::cos(a)
+#else
+    std::cosf(a)
+#endif
+    );
 }
 
 }

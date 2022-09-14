@@ -19,6 +19,10 @@ inline scalar fabs(const scalar& a);
 
 inline scalar rsqrt(const scalar& a);
 
+inline scalar sin(const scalar& a);
+
+inline scalar con(const scalar& a);
+
 }
 
 #include "__impl/scalar.inl"
