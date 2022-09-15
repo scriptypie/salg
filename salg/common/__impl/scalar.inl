@@ -52,4 +52,16 @@ scalar cos(const scalar& a)
     );
 }
 
+scalar tan(const scalar& a)
+{
+    return 
+    (
+#ifdef SALG_HIGH_PRECISION
+    std::tan(a)
+#else
+    std::tanf(a)
+#endif
+    );
+}
+
 }

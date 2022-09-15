@@ -21,7 +21,9 @@ inline scalar rsqrt(const scalar& a);
 
 inline scalar sin(const scalar& a);
 
-inline scalar con(const scalar& a);
+inline scalar cos(const scalar& a);
+
+inline scalar tan(const scalar& a);
 
 }
 

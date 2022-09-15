@@ -18,6 +18,12 @@ struct mat4 : mat_base<4, 4>
         const scalar& m20, const scalar& m21, const scalar& m22, const scalar& m23,
         const scalar& m30, const scalar& m31, const scalar& m32, const scalar& m33
     );
+
+    mat4& operator+=(const scalar& s);
+    mat4& operator-=(const scalar& s);
+    mat4& operator*=(const scalar& s);
+    mat4& operator/=(const scalar& s);
+    
 };
 
 }
