@@ -64,4 +64,16 @@ scalar tan(const scalar& a)
     );
 }
 
+scalar atan2(const scalar& a, const scalar& b)
+{
+    return 
+    (
+#ifdef SALG_HIGH_PRECISION
+    std::atan2(a, b)
+#else
+    std::atan2f(a, b)
+#endif
+    );
+}
+
 }

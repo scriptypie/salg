@@ -25,6 +25,8 @@ inline scalar cos(const scalar& a);
 
 inline scalar tan(const scalar& a);
 
+inline scalar atan2(const scalar& a, const scalar& b);
+
 }
 
 #include "__impl/scalar.inl"

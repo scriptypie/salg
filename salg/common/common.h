@@ -26,7 +26,7 @@ namespace salg
         if (a == b) return a;
         return (a > b) ? a : b;
     }
-
+    
 }
 
 #endif

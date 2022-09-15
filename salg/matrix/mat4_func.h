@@ -3,6 +3,7 @@
 #define SALG_MATRIX_MAT4_FUNC_H
 
 #include "mat4_type.h"
+#include "../common/transform_component.h"
 
 namespace salg
 {
@@ -18,6 +19,11 @@ namespace salg
     inline mat4 min(mat4 a, mat4 b);
 
     inline mat4 translate(vec3 translation);    
+    inline vec3 getTranslation(mat4 m);
+    inline vec3 getScale(mat4 m);
+    inline transform_component decompose(mat4 m);
+    inline void orthoNormalize(mat4& m);
+    inline mat4 transpose(mat4 m);
     inline mat4 scale(vec3 s);    
     inline mat4 rotateX(const scalar& angle);
     inline mat4 rotateY(const scalar& angle);

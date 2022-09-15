@@ -73,6 +73,73 @@ mat4 translate(vec3 translation)
     return t;
 }
 
+vec3 getTranslation(mat4 m)
+{
+    return { m.m[0][3], m.m[1][3], m.m[2][3] };
+}
+
+vec3 getScale(mat4 m)
+{
+    vec3 v(
+        magnitude({m.m[0][0], m.m[0][1], m.m[0][2]}),
+        magnitude({m.m[1][0], m.m[1][1], m.m[1][2]}),
+        magnitude({m.m[2][0], m.m[2][1], m.m[2][2]})
+    );
+    return v;
+}
+
+transform_component decompose(mat4 m)
+{
+    mat4 mat = transpose(m);
+    transform_component t;
+    t.scale.data[0] = magnitude({mat.m[0][0], mat.m[0][1], mat.m[0][2]});
+    t.scale.data[1] = magnitude({mat.m[1][0], mat.m[1][1], mat.m[1][2]});
+    t.scale.data[2] = magnitude({mat.m[2][0], mat.m[2][1], mat.m[2][2]});
+
+    orthoNormalize(mat);
+
+    t.rotation.data[0] = atan2(mat.m[1][2], mat.m[2][2]);
+    t.rotation.data[1] = atan2(-mat.m[0][2], sqrt(mat.m[1][2] * mat.m[1][2] + mat.m[2][2] * mat.m[2][2]));
+    t.rotation.data[2] = atan2(mat.m[0][1], mat.m[0][0]);
+
+    t.translation.data[0] = mat.m[3][0];
+    t.translation.data[1] = mat.m[3][1];
+    t.translation.data[2] = mat.m[3][2];
+
+    return t;
+}
+
+void orthoNormalize(mat4& m)
+{
+    vec3 right(m.m[0][0], m.m[1][0], m.m[2][0]);
+    normalize(right);
+
+    m.m[0][0] = right.x;
+    m.m[1][0] = right.y;
+    m.m[2][0] = right.z;
+
+    vec3 up(m.m[0][1], m.m[1][1], m.m[2][1]);
+    normalize(up);
+    m.m[0][1] = up.x;
+    m.m[1][1] = up.y;
+    m.m[2][1] = up.z;
+
+    vec3 dir(m.m[0][2], m.m[1][2], m.m[2][2]);
+    normalize(dir);
+    m.m[0][2] = dir.x;
+    m.m[1][2] = dir.y;
+    m.m[2][2] = dir.z;
+}
+
+mat4 transpose(mat4 m)
+{
+    mat4 t;
+    for (short l = 0; l < 4; l++)
+        for (short c = 0; c < 4; c++)
+            t.m[l][c] = m.m[c][l];
+    return t;
+}
+
 mat4 scale(vec3 s)
 {
     mat4 t;
