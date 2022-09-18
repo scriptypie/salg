@@ -1,3 +1,11 @@
+/**
+ * @file scalar_array.h
+ * @author Krivenko (scriptypie) Slava (miracl303@inbox.ru)
+ * @brief Array structure for simplification of design.
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #pragma once
 #ifndef SALG_COMMON_SCALAR_ARRAY_H
 #define SALG_COMMON_SCALAR_ARRAY_H

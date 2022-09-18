@@ -1,3 +1,11 @@
+/**
+ * @file common.h
+ * @author Krivenko (scriptypie) Slava (miracl303@inbox.ru)
+ * @brief Common functions and union of base functionality.
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #pragma once
 #ifndef SALG_COMMON_COMMON_H
 #define SALG_COMMON_COMMON_H

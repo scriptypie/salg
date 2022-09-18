@@ -1,3 +1,11 @@
+/**
+ * @file vec1_type.h
+ * @author Krivenko (scriptypie) Slava (miracl303@inbox.ru)
+ * @brief Pure vec1 type structure
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #pragma once
 #ifndef SALG_VECTOR_VEC1_TYPE_H
 #define SALG_VECTOR_VEC1_TYPE_H

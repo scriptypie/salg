@@ -1,3 +1,11 @@
+/**
+ * @file vec2_func.h
+ * @author Krivenko (scriptypie) Slava (miracl303@inbox.ru)
+ * @brief Functions for vec2 type
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #pragma once
 #ifndef SALG_VECTOR_VEC2_FUNCTIONAL_H
 #define SALG_VECTOR_VEC2_FUNCTIONAL_H

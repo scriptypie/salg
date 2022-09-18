@@ -1,3 +1,11 @@
+/**
+ * @file comparator.h
+ * @author Krivenko (scriptypie) Slava (miracl303@inbox.ru)
+ * @brief Used for fast approximated comparison with floating-point-units (32/64bit)
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #pragma once
 #ifndef SALG_COMMON_COMPARATOR_H
 #define SALG_COMMON_COMPARATOR_H

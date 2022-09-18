@@ -1,9 +1,8 @@
 /**
  * @file salg.h
- * @author Krivenko Slava (miracl303@inbox.ru)
+ * @author Krivenko (scriptypie) Slava (miracl303@inbox.ru)
  * @brief SALG - small and simple (stupid) header-only library for games math
- * @version 0.1
- * @date 2022-09-11
+ * @version 1.0
  * 
  * @copyright Copyright (c) 2022
  * 

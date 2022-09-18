@@ -3,7 +3,7 @@
 #define SALG_MATRIX_MAT4_FUNC_H
 
 #include "mat4_type.h"
-#include "../common/transform_component.h"
+#include "../ext/transform_component.h"
 
 namespace salg
 {

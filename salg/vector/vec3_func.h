@@ -1,3 +1,11 @@
+/**
+ * @file vec3_func.h
+ * @author Krivenko (scriptypie) Slava (miracl303@inbox.ru)
+ * @brief Functions for vec3 type
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #pragma once
 #ifndef SALG_VECTOR_VEC3_FUNCTIONAL_H
 #define SALG_VECTOR_VEC3_FUNCTIONAL_H

@@ -1,6 +1,6 @@
 #include "../scalar.h"
 
-#include <cmath>
+#include <cmath> // sin(), sinf(), cos(), cosf(), tan(), tanf(), atan2(), atan2f()
 
 namespace salg
 {
@@ -11,7 +11,7 @@ scalar fabs(const scalar& a)
 #ifdef SALG_HIGH_PRECISION
     tmp &= 0x7fffffffffffffff;
 #else
-    tmp &= 0x7FFFFFFF;
+    tmp &= 0x7fffffff;
 #endif
     return *(scalar*)&tmp;
 }

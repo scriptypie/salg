@@ -1,3 +1,11 @@
+/**
+ * @file vec_base.h
+ * @author Krivenko (scriptypie) Slava (miracl303@inbox.ru)
+ * @brief Base data types for vectors used in library
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #pragma once
 #ifndef SALG_VEC_BASE
 #define SALG_VEC_BASE
