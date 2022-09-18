@@ -393,4 +393,14 @@ mat4 inverse(mat4 m)
     return t;   
 }
 
+mat4 identity()
+{
+    return
+    (
+    mat4{
+        1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1
+    }
+    );
+}
+
 }

@@ -37,6 +37,7 @@ namespace salg
     inline mat4 lookAt(vec3 fromPos, vec3 toPos, vec3 up);
     inline scalar determinant(mat4 m);
     inline mat4 inverse(mat4 m);
+    inline mat4 identity();
 
 }
 

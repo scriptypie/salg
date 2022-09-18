@@ -4,6 +4,7 @@
 
 #include "macros.h"
 #include "scalar.h"
+#include "scalar_array.h"
 #include "comparator.h"
 
 #include <ostream>

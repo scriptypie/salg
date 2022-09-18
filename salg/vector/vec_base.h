@@ -9,24 +9,6 @@ namespace salg
 
     template<size_t N> struct vec_base;
 
-    template<size_t SIZE>
-    struct scalar_array
-    {
-        scalar data[SIZE] = {};
-
-        inline scalar_array() = default;
-        inline scalar_array(scalar_array&&) = default;
-        inline scalar_array(const scalar_array&) = default;
-        inline scalar_array& operator=(scalar_array&&) = default;
-        inline scalar_array& operator=(const scalar_array&) = default;
-        inline ~scalar_array() = default;
-        inline scalar_array(scalar _data[SIZE]) : data(_data) {}
-
-        scalar& operator[](size_t n) { return data[n]; }
-        const scalar& operator[](size_t n) const { return data[n]; }
-
-    };
-
     template<>
     struct vec_base<1>
     {
