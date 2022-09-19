@@ -1,4 +1,4 @@
-# salg
+![image](salg.jpg)
 
 Simple and sometimes stupid math library for gamedev.
 
